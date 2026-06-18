@@ -11,8 +11,7 @@
             padding: 0;
             overflow-x: hidden;
 
-            /* Moving gradient background */
-            background: linear-gradient(180deg, #0a8f3a, #0066cc, #0a8f3a);
+            background: linear-gradient(180deg, #004aad, #009688, #004aad);
             background-size: 400% 400%;
             animation: gradientMove 18s ease infinite;
         }
@@ -23,7 +22,6 @@
             100% { background-position: 0% 0%; }
         }
 
-        /* HAMBURGER NAVIGATION */
         .nav-container {
             position: fixed;
             top: 0;
@@ -56,10 +54,8 @@
             height: 5px;
             background: white;
             margin: 4px 0;
-            transition: 0.4s;
         }
 
-        /* MENU PANEL */
         .menu {
             position: fixed;
             top: 0;
@@ -79,7 +75,6 @@
 
         .menu h2 {
             color: white;
-            margin-top: 0;
         }
 
         .menu a {
@@ -94,19 +89,8 @@
             margin-top: 90px;
             background: rgba(0, 0, 0, 0.4);
             color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
-            backdrop-filter: blur(4px);
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 48px;
-        }
-
-        h2 {
-            color: #004488;
-            font-size: 28px;
         }
 
         .section {
@@ -116,19 +100,24 @@
             width: 80%;
             border-radius: 12px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease-out;
         }
 
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        ul {
+        .invite-btn {
+            display: inline-block;
+            background: #5865F2;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
             font-size: 20px;
-            line-height: 1.8;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .invite-btn:hover {
+            background: #4752C4;
+            transform: scale(1.05);
         }
 
         footer {
@@ -137,14 +126,13 @@
             text-align: center;
             padding: 20px;
             margin-top: 60px;
-            backdrop-filter: blur(4px);
         }
     </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION BAR -->
+<!-- NAVIGATION -->
 <div class="nav-container">
     <div class="nav-title">AAIG</div>
 
@@ -155,81 +143,104 @@
     </div>
 </div>
 
-<!-- SLIDE-OUT MENU -->
+<!-- MENU -->
 <div class="menu" id="menu">
     <h2>AAIG Airlines</h2>
-    <a href="airzimbabwe.html">Air Zimbabwe</a>
-    <a href="aercymru.html">AerCYMRU</a>
-    <a href="fastjetmax.html">Fastjet MAX</a>
-    <a href="arabicairways.html">Arabic Airways</a>
-    <a href="flyamerican.html">FlyAmerican</a>
+    <a href="#airzimbabwe">Air Zimbabwe</a>
+    <a href="#aercymru">AerCYMRU (Lead Airline)</a>
+    <a href="#fastjetmax">Fastjet MAX</a>
+    <a href="#arabicairways">Arabic Airways</a>
+    <a href="#flyamerican">FlyAmerican</a>
 
     <h2>More</h2>
-    <a href="about.html">About AAIG</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About AAIG</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
 </div>
 
+<!-- HEADER -->
 <header>
-    <h1>Air Africa International Group (AAIG)</h1>
-    <p>Connecting Nations. Uniting Skies. Inspiring Flight.</p>
+    <h1>Air Africa International Group</h1>
+    <p>Connecting Africa, Europe, the Middle East, and North America</p>
+
+    <!-- DISCORD INVITE BUTTON -->
+    <a href="https://discord.gg/DtAXnH8CE" target="_blank" class="invite-btn">
+        Join the AAIG Discord
+    </a>
 </header>
 
-<div class="section">
-    <h2>About AAIG</h2>
-    <p>
-        The Air Africa International Group (AAIG) is a multinational airline alliance founded on the belief that 
-        aviation can unite cultures, strengthen economies, and bring the world closer together. Born in Zimbabwe 
-        through the leadership of Air Zimbabwe, AAIG has grown into a global network spanning Africa, Europe, 
-        the Middle East, and North America.
-    </p>
-    <p>
-        AAIG is built on cooperation, innovation, and regional pride. Each member airline maintains its own identity, 
-        culture, and operational style — yet all share a unified commitment to excellence, safety, and global 
-        connectivity.
-    </p>
-</div>
+<!-- AIRLINE SECTIONS -->
 
-<div class="section">
-    <h2>Member Airlines</h2>
-    <ul>
-        <li><strong>Air Zimbabwe</strong> — Founding Member (Hub: Harare HRE)</li>
-        <li><strong>AerCYMRU</strong> — Second Member (Hub: Cardiff CWL)</li>
-        <li><strong>Fastjet MAX</strong> — Third Member (Hub: Harare HRE)</li>
-        <li><strong>Arabic Airways</strong> — Fourth Member (Hub: Abu Dhabi AUH)</li>
-        <li><strong>FlyAmerican</strong> — Fifth Member (Hub: Dallas–Fort Worth DFW)</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Our Mission</h2>
+<section id="airzimbabwe" class="section">
+    <h1>Air Zimbabwe</h1>
     <p>
-        AAIG aims to build a unified aviation group where each airline keeps its identity while gaining the strength 
-        and reach of a global alliance.
+        Air Zimbabwe is the national airline of Zimbabwe and a founding member of AAIG.
+        Operating from Harare International Airport (HRE), the airline represents Zimbabwean
+        heritage, national pride, and a long history of African aviation.
     </p>
-</div>
+</section>
+
+<section id="aercymru" class="section">
+    <h1>AerCYMRU</h1>
+    <p>
+        AerCYMRU is the lead airline of AAIG, representing Wales with modern operations,
+        strong branding, and a growing international network.
+    </p>
+</section>
+
+<section id="fastjetmax" class="section">
+    <h1>Fastjet MAX</h1>
+    <p>
+        Fastjet MAX is AAIG’s low‑cost carrier, offering affordable travel across Africa
+        with a focus on efficiency and accessibility.
+    </p>
+</section>
+
+<section id="arabicairways" class="section">
+    <h1>Arabic Airways</h1>
+    <p>
+        Arabic Airways connects the Middle East and Africa through AAIG, providing premium
+        service and strong regional connectivity.
+    </p>
+</section>
+
+<section id="flyamerican" class="section">
+    <h1>FlyAmerican</h1>
+    <p>
+        FlyAmerican is AAIG’s North American partner airline, expanding the alliance’s reach
+        across the United States and beyond.
+    </p>
+</section>
+
+<!-- MORE SECTIONS -->
+
+<section id="about" class="section">
+    <h1>About AAIG</h1>
+    <p>
+        The Air Africa International Group (AAIG) is a global airline alliance connecting
+        Africa, Europe, the Middle East, and North America through its member airlines.
+    </p>
+</section>
+
+<section id="news" class="section">
+    <h1>AAIG News</h1>
+    <p>
+        Latest updates, announcements, and alliance developments will appear here.
+    </p>
+</section>
+
+<section id="contact" class="section">
+    <h1>Contact AAIG</h1>
+    <p>
+        For inquiries, partnerships, or support, please reach out to the AAIG team.
+    </p>
+</section>
 
 <footer>
     <p>©AAIG 2026</p>
 </footer>
 
 <script>
-    const sections = document.querySelectorAll('.section');
-
-    function revealOnScroll() {
-        const trigger = window.innerHeight * 0.85;
-
-        sections.forEach(section => {
-            const top = section.getBoundingClientRect().top;
-            if (top < trigger) {
-                section.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-
     function toggleMenu() {
         document.getElementById("menu").classList.toggle("open");
     }
